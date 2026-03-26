@@ -5,8 +5,6 @@
 * This program shows the brightness level of light
 */
 
-let neopixelStrip: neopixel.Strip = null
-let lightAmount: number = 0
 // variables
 let neopixelStrip: neopixel.Strip = null
 let lightAmount: number = 0
