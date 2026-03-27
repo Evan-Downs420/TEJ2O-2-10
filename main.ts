@@ -1,4 +1,4 @@
-                                       /* Copyright (c) 2020 MTHS All rights reserved
+/* Copyright (c) 2020 MTHS All rights reserved
 *
 * Created by: Evan
 * Created on: Feb 2026
@@ -19,27 +19,26 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-input.onButtonPressed(Button.A, function() {
 
-  lightAmount = input.lightLevel()
+input.onButtonPressed(Button.A, function(){
+
+    lightAmount = input.lightLevel()
 
   if (lightAmount <= 51) {
       neopixelStrip.clear()
   }
-
   if (lightAmount > 52) {
-      neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+      neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.White)) 
   }
-
   if (lightAmount > 104) {
-      neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+      neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
   }
-
   if (lightAmount > 156) {
-      neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
+      neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
   }
-
   if (lightAmount > 208) {
-      neopixelStrip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
-  }
+      neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Purple))
+    }
+    basic.showNumber(lightAmount)
+    neopixelStrip.show()
 })
